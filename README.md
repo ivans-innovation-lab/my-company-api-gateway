@@ -1,6 +1,20 @@
 # my-company-api-gateway-backingservice
 
-Implementation of an API gateway that is the single entry point for all clients. The API gateway handles requests in one of two ways. Some requests are simply proxied/routed to the appropriate service. It handles other requests by fanning out to multiple services.
+Implementation of an API gateway that is the single entry point for all clients. The API gateway handles requests by simply proxying/routing them to the appropriate service. 
+
+```
+zuul:
+  routes:
+    my-company-blog-domain-microservice:
+      path: /command/blog/**
+    my-company-blog-materialized-view-microservice:
+      path: /query/blog/**
+    my-company-project-domain-microservice:
+      path: /command/project/**
+    my-company-project-materialized-view-microservice:
+      path: /query/project/**
+
+```
 
 ## Running instructions
 
@@ -31,7 +45,7 @@ $ curl http://127.0.0.1:9000/query/blog/blogposts
 $ curl -H "Content-Type: application/json" -X POST -d '{"name":"Name","repoUrl":"URL","siteUrl": "siteUrl","description": "sdfsdfsdf"}' http://127.0.0.1:9000/command/project/projectcommands
 ```
 ```
-$curl http://127.0.0.1:9000/query/project/projects
+$ curl http://127.0.0.1:9000/query/project/projects
 ```
 
 ### WebSocket on the gateway
