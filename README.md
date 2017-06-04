@@ -1,4 +1,4 @@
-# my-company-api-gateway-backingservice
+# my-company-api-gateway-backingservice [![CircleCI](https://circleci.com/gh/ivans-innovation-lab/my-company-api-gateway-backingservice.svg?style=svg)](https://circleci.com/gh/ivans-innovation-lab/my-company-api-gateway-backingservice)
 
 Implementation of an API gateway that is the single entry point for all clients. The API gateway handles requests by simply proxying/routing them to the appropriate service. 
 
