@@ -20,8 +20,8 @@ zuul:
 
 Make sure that services are running:
 
- - my-company-configuration-backingservice
- - my-company-registry-backingservice
+ - [my-company-configuration-backingservice](https://github.com/ivans-innovation-lab/my-company-configuration-backingservice)
+ - [my-company-registry-backingservice](https://github.com/ivans-innovation-lab/my-company-registry-backingservice)
  
 
 ```bash
