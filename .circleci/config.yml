@@ -80,7 +80,6 @@ jobs:
             cf push stage-my-company-api-gateway-backingservice -p workspace/*.jar --no-start
             cf bind-service stage-my-company-api-gateway-backingservice my-company-configuration-backingservice
             cf bind-service stage-my-company-api-gateway-backingservice my-company-registry-backingservice
-            cf bind-service stage-my-company-api-gateway-backingservice mysql-stage
             cf bind-service stage-my-company-api-gateway-backingservice rabbit-stage
             cf restart stage-my-company-api-gateway-backingservice
             
@@ -119,7 +118,6 @@ jobs:
             cf push prod-my-company-api-gateway-backingservice -p workspace/*.jar --no-start
             cf bind-service prod-my-company-api-gateway-backingservice my-company-configuration-backingservice
             cf bind-service prod-my-company-api-gateway-backingservice my-company-registry-backingservice
-            cf bind-service prod-my-company-api-gateway-backingservice mysql-prod
             cf bind-service prod-my-company-api-gateway-backingservice rabbit-prod
             cf restart prod-my-company-api-gateway-backingservice
       
