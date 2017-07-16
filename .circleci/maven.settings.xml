@@ -4,12 +4,12 @@
 	<servers>
 		<server>
 			<id>idugalic-releases</id>
-			<username>idugalic</username>
+			<username>admin</username>
 			<password>${env.MAVEN_PASSWORD}</password>
 		</server>
 		<server>
 			<id>idugalic-snapshots</id>
-			<username>idugalic</username>
+			<username>admin</username>
 			<password>${env.MAVEN_PASSWORD}</password>
 		</server>
 		<server>
@@ -19,6 +19,11 @@
 			<configuration>
 				<email>idugalic@gmail.com</email>
 			</configuration>
+		</server>
+		<server>
+			<id>mycloudfoundry-instance</id>
+			<username>idugalic@gmail.com</username>
+			<password>${env.CF_PASSWORD}</password>
 		</server>
 	</servers>
 

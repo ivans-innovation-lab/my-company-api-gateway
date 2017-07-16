@@ -33,8 +33,6 @@ public class EventLoggingHandler {
 
     private void publish(String username, AuditableAbstractEvent event, String queue) {
         LOG.debug("IID:{} ET:{} EID:[{}] is published via WebSocket", IID, event.getClass().getSimpleName(), event.getId());
-        // TODO send messages to users in the future
-        // this.messagingTemplate.convertAndSendToUser(username, queue, event);
         this.messagingTemplate.convertAndSend(queue, event);
     }
 
