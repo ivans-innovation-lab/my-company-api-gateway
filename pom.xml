@@ -79,12 +79,17 @@
 		<dependency>
 			<groupId>com.idugalic</groupId>
 			<artifactId>my-company-common-blog</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.idugalic</groupId>
 			<artifactId>my-company-common-project</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.idugalic</groupId>
+			<artifactId>my-company-common-team</artifactId>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -173,4 +178,32 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>idugalic-releases</id>
+			<name>idugalic-releases</name>
+			<url>http://maven.idugalic.pro/artifactory/local-release-repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>idugalic-snapshots</id>
+			<name>idugalic-snapshots</name>
+			<url>http://maven.idugalic.pro/artifactory/local-repository</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>public-atomist-release</id>
+			<name>Atomist Release</name>
+			<url>https://atomist.jfrog.io/atomist/libs-release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
 </project>

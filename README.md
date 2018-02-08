@@ -57,6 +57,9 @@ All the events will be sent to browser via WebSocket and displayed on http://127
 
 Open RabbitMQ management web console at http://localhost:15672/ and explore exchanges, queues and messages.
 
+username: guest
+password: guest
+
 ### registry backing service
 
 Open Registry (Eureka) web console at http://localhost:8761/ and find 'my-company-api-gateway-backingservice' registered.
